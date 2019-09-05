@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
-COPY ["HerokuTest/HerokuTest.csproj", "HerokuTest/"]
+COPY ["HerokuTest.csproj", "HerokuTest/"]
 RUN dotnet restore "HerokuTest/HerokuTest.csproj"
 COPY . "./HerokuTest"
 WORKDIR "/src/HerokuTest"
